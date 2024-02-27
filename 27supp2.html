@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         var imgg=document.createElement("img");
+         document.body.appendChild(imgg)
+         
+          
+        var bb=localStorage.getItem("obj");
+        
+        var pg=JSON.parse(bb);
+        imgg.setAttribute("src",pg["image"]);
+        imgg.setAttribute("style","width:400px;height:400px;border:2px solid;margin-left:100px;margin-top:40px;")
+
+
+        // var bp=document.createElement("div");
+        // bp.setAttribute("style","margin-left:600px;margin-top:-600px;")
+        // bp.innerText="hello"
+        // document.body.appendChild(bp);
+
+        var bp2=document.createElement("h1")
+        bp2.innerText=pg["title"];
+        bp2.setAttribute("style","color:grey;margin-left:150px;")
+         document.body.appendChild(bp2)
+
+         var bp3=document.createElement("h1")
+         bp3.innerText="$$ : "+pg["price"];
+         bp3.setAttribute("style","color:red;margin-left:200px;")
+         document.body.appendChild(bp3)
+
+
+         var bp4=document.createElement("h1")
+         bp4.innerText="Quantity : "+pg["id"];
+         bp4.setAttribute("style","color:green;margin-left:190px;")
+         document.body.appendChild(bp4)
+
+
+         var oc1=document.createElement("h2");
+         document.body.appendChild(oc1)
+       oc1.innerText="BUY NOW"
+        oc1.setAttribute("style"," margin-left:190px;width:150px;height:50px;border:2px solid;background-color:gold;justify-content:center;display:flex; line-height:50px;")
+        oc1.addEventListener("click",baby);
+
+function baby(){
+ window.location.assign("./27supp3.html");
+}
+    </script>
+</body>
+</html>
